@@ -6,9 +6,13 @@ t = int(inp.readline())
 
 ans = []
 
-for i in range(t):
+while t:
+    t-=1    
     n,m = map(int,inp.readline().split())
-    
-
-for i in ans:
-    print(i)
+    for i in range(n):
+        for j in range(m):
+            if i==0 and j==0:
+                print('W',end='')
+            else:
+                print('B',end='')
+        print()
