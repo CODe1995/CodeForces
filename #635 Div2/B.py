@@ -5,6 +5,7 @@ dp=[[[0 for _ in range(31)] for _ in range(30+1)] for _ in range(10**5+1)]
 
 def skill1(h):    
     return math.floor(h/2)+10
+
 def skill2(h):
     return h-10
 
@@ -20,20 +21,23 @@ def calc(h,n,m):
         return dp[h][n][m]        
     elif m==0 and n==0:
         dp[h][n][m]=2
-        return dp[h][n][m]    
+        return dp[h][n][m]   
+    lst = [] 
     if n>0:        
-        # if m==0:
-        #     dp[h][n][m] = 2            
-        #     return dp[h][n][m]
-        dp[h][n][m] = calc(skill1(h),n-1,m)        
-        return dp[h][n][m]
+        lst.append(calc(skill1(h),n-1,m))
     if m>0:
-        # if (n==0 and h-10*m>0):
-        #     dp[h][n][m] = 2            
-        #     return dp[h][n][m]
-        # else:
-            dp[h][n][m] = calc(skill2(h),n,m-1)    
-            return dp[h][n][m]
+        lst.append(calc(skill2(h),n,m-1))    
+    
+    if 1 in lst:
+        dp[h][n][m]=1
+    else:
+        dp[h][n][m]=2
+        
+    return dp[h][n][m]
+        
+        
+
+
         
 t = int(input())
 
@@ -45,5 +49,4 @@ while t:
         print('YES')
     else:
         print('NO')
-    # print(dp[x][n][m])
-    
+    # print(dp[x][n][m])      
