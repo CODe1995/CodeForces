@@ -19,7 +19,6 @@ while t:
                 minus=1
             elif arrA[i-1]>0 and plus==0:
                 plus=1
-
         if arrA[i]<arrB[i] and plus==1:
             ans='YES'
         elif arrA[i]>arrB[i] and minus==1:
@@ -28,8 +27,7 @@ while t:
             ans='YES'
         else:
             ans='NO'
-            break
-                
+            break                
     print(ans)
 
 
