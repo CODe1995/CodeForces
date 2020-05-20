@@ -7,8 +7,9 @@ while t:
     n=int(input())
     # if n%3==0:
     #     print(n//3)
-    # else:
-    i=1
-    while n%(3+((i-1)*4))!=0:
-        i+=1
-    print(n//(3+((i-1)*4)))
+    # else:    
+    for i in range(1,31):
+        if n%(3+((i-1)*4))==0:
+            print(n//(3+((i-1)*4)))
+            break
+    
