@@ -21,13 +21,11 @@ while t:
             j=0
             while j+1<=m:
                 if field[i][j:j+2]==['.','.']:
-                    j+=2
+                    j+=1
                     ans+=y
                 elif field[i][j]=='.':
                     ans+=x
-                    j+=1
-                else:
-                    j+=1
+                j+=1
     print(ans)
                 
             
