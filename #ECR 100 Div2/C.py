@@ -7,6 +7,13 @@ def ii():return int(input())
 def mii():return map(int,input().rstrip().split())
 def lmii():return list(map(int,input().rstrip().split()))
 ##########################################################
+'''
+[예시입력]
+3
+1 5 -> 시간1. 5로 이동 시작
+3 0 -> 아직 이동 중이므로 무시된다.(x=2)
+6 4
+'''
 t = ii()
 for _ in range(t):
     n = ii()
