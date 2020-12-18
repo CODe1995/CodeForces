@@ -15,10 +15,10 @@ def lmii():return list(map(int,input().rstrip().split()))
 t = ii()
 for _ in range(t):
     n = ii()
-    arr = lmii()
-    S = sum(arr)
-    mid = S//n
-    ans = [mid]*n
-    for _ in range(n):
-        print(str(mid)+" ")
-    print("\n")
+    A = lmii()
+    for i in range(n):
+        tmp = 1
+        while tmp <= A[i]:
+            tmp*=2
+        print(str(tmp//2)+" ")
+    print('\n')
