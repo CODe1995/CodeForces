@@ -16,14 +16,11 @@ for _ in range(t):
     B = list(map(int,list(ip())))
     awin = 0
     bwin = 0
-    eq = 0
     for i in range(n):
         if A[i] < B[i]:
             bwin+=1
         elif A[i]>B[i]:
             awin+=1
-        else:
-            eq+=1
     if awin>bwin:print('RED')
     elif awin<bwin:print('BLUE')
     else:print('EQUAL')
