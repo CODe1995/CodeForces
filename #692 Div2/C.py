@@ -23,7 +23,6 @@ for _ in range(t):
         if x==y: return 1
         parent[x]=y
         return 0
-
     res = 0
     for i in range(m):
         x,y = mii()
