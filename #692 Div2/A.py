@@ -13,11 +13,11 @@ t = ii()
 for _ in range(t):
     n =ii()
     arr = ip()
-    endPoint = 0
-    for i in range(n):
-        if arr[i:] == ')'*(n-i):
-            # print(n-i,i)
-            break
-    if i>=n-i:print('NO')
-    else:print('YES')
+    cnt=0
+    for i in range(n-1,-1,-1):
+        if arr[i]==')':
+            cnt+=1
+        else:break
+    if 2*cnt>n:print('YES')
+    else:print('NO')
             
